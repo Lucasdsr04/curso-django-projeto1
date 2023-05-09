@@ -8,5 +8,5 @@ def home(request):
 
 
 def recipe(request, id):
-    context = {'recipes': [make_recipe()]}
+    context = {'recipes': [make_recipe()], 'is_detail_page': True}
     return render(request, 'recipes/pages/recipe-view.html', context=context)
